@@ -1,0 +1,21 @@
+p {
+	color: rgb(46, 151, 69);
+}
+
+h1 {
+	color:rgb(118, 144, 71);
+	text-shadow: rgb(143, 175, 130) 1px 0 10px;
+
+}
+
+h2 {
+	margin: 5px;
+	color : #9dd969;
+	font-family: cursive;
+	background: linear-gradient(90deg,white,#ffefaf);
+}
+h3{
+    color:rgb(143, 175, 130)
+}
+
+
