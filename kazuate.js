@@ -11,28 +11,29 @@ let kaisu = 0;
 let b = document.querySelector('#print');
 b.addEventListener('click', hantei);
 function hantei() {
-  let i = document.querySelector('input[name="y"]');
+  let i = document.querySelector('input[name="yoso"]');
   let yoso = i.value;
+  Number('yoso');
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
   kaisu=kaisu+1;
   let su =document.querySelector('span#kaisu');
   su.textContent=kaisu;
   let n =document.querySelector('span#answer');
   n.textContent=yoso;
+
   // 課題3-1: 正解判定する;
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
   let t = document.querySelector('p#result');
-if(kaisu<3){
-    if(yoso===kotae){
-        t.textContent="正解です.おめでとう!";
-        kaisu=3;
+ if(kaisu<3){
+    if(yoso==kotae){
+      t.textContent="正解です.おめでとう!"; 
     }if(yoso<kotae){
       t.textContent="まちがい.答えはもっと大きいですよ.";
     }if(yoso>kotae){
       t.textContent="まちがい.答えはもっと小さいですよ.";
     }
-}else{
-  t.textContent="答えは"+kotae+"でした.既にゲームは終わっています.";
-}
+  }else{
+   t.textContent="答えは"+kotae+"でした.既にゲームは終わっています.";
+  }
 }
