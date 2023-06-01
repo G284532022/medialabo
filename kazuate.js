@@ -25,7 +25,7 @@ function hantei() {
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
   let t = document.querySelector('p#result');
- if(kaisu<3){
+ if(kaisu<4){
     if(yoso==kotae){
       t.textContent="正解です.おめでとう!"; 
     }if(yoso<kotae){
