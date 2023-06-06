@@ -1,10 +1,10 @@
 ////////// 課題3-2 ここからプログラムを書こう
-let dd = [{tosi:"カイロ", id:"360630"},{tosi:"モスクワ", id:"360630"},{tosi:"", id:""},{tosi:"", id:""}
-,{tosi:"モスクワ", id:"360630"},{tosi:"モスクワ", id:"360630"},{tosi:"モスクワ", id:""},{tosi:"モスクワ", id:""}
-,{tosi:"モスクワ", id:"360630"},{tosi:"モスクワ", id:"360630"},{tosi:"モスクワ", id:""}],
+let dd = [{tosi:"カイロ", id:"360630"},{tosi:"モスクワ", id:"524901"},{tosi:"ヨハネスブルク", id:"993800"},{tosi:"北京", id:"1816670"},{tosi:"東京", id:"1850147"}
+,{tosi:"シンガポール", id:"1880252"},{tosi:"シドニー", id:"2147714"},{tosi:"ロンドン", id:"2643743"},{tosi:"パリ", id:"2968815"}
+,{tosi:"リオデジャネイロ", id:"3451189"},{tosi:"ニューヨーク", id:"5128581"},{tosi:"ロサンゼルス", id:"5368361"}]
 let b = document.querySelector('#print');
 b.addEventListener('click', sendRequest);
-function sendRequest() {
+function sendRequest(){
   // URL を設定
   let d =document.querySelector('input[name="toshi"]');
   let y =parseInt(d.value);
