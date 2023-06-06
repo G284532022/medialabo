@@ -1,5 +1,5 @@
 ////////// 課題3-2 ここからプログラムを書こう
-let dd = [{tosi:"カイロ", id:"360630"},{tosi:"モスクワ", id:"524901"},{tosi:"ヨハネスブルク", id:"993800"},{tosi:"北京", id:"1816670"},{tosi:"東京", id:"1850147"}
+let dk = [{tosi:"カイロ", id:"360630"},{tosi:"モスクワ", id:"524901"},{tosi:"ヨハネスブルク", id:"993800"},{tosi:"北京", id:"1816670"},{tosi:"東京", id:"1850147"}
 ,{tosi:"シンガポール", id:"1880252"},{tosi:"シドニー", id:"2147714"},{tosi:"ロンドン", id:"2643743"},{tosi:"パリ", id:"2968815"}
 ,{tosi:"リオデジャネイロ", id:"3451189"},{tosi:"ニューヨーク", id:"5128581"},{tosi:"ロサンゼルス", id:"5368361"}]
 let r0,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11;
@@ -20,12 +20,9 @@ let b = document.querySelector('#print');
 b.addEventListener('click', erabareta);
 function erabareta(){
   let tumo =[r0,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11];
-  sendRepuest(dd[0].id);
 }
 function sendRequest(y){
   // URL を設定
-  let d =document.querySelector('input[name="toshi"]');
-  let y =parseInt(d.value);
   let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+y+'.json';
 
   // 通信開始
