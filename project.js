@@ -50,7 +50,7 @@ function showResult(resp) {
   let f3=document.querySelector('div#ansewer3');
   f3.textContent='最低気温は'+data.main.temp_min+'です。';
   let f4=document.querySelector('div#ansewer4');
-  f4.textContent='天気は'+data.weather.description+'です。';
+  f4.textContent='天気は'+data.weather[0].description+'です。';
   let f5=document.querySelector('div#ansewer5');
   f5.textContent='緯度'+data.coord.lon+'です。';
   let f6=document.querySelector('div#ansewer6');

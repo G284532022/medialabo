@@ -5,6 +5,7 @@ p {
 h1 {
 	color:rgb(108, 142, 46);
 	text-shadow: rgb(86, 206, 38) 1px 0 10px;
+	border-bottom-style: dotted;
 
 }
 
@@ -13,6 +14,7 @@ h2 {
 	color : #5b8433;
 	font-family: cursive;
 	background: linear-gradient(90deg,rgb(196, 200, 194),#6db691);
+
 }
 h3{
     color:rgb(50, 91, 33);
