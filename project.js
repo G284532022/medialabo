@@ -15,15 +15,21 @@ r8=document.getElementById("i");
 r9=document.getElementById("j");
 r10=document.getElementById("k");
 r11=document.getElementById("l");
-
 let b = document.querySelector('#print');
 b.addEventListener('click', erabareta);
 function erabareta(){
   let tumo =[r0,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11];
+  let gg=0;
+  for (let jj of tumo) {
+    if (jj.checked) {   
+      sendRequest(dk[gg].id);
+    }
+    gg++;
+  }
 }
-function sendRequest(y){
+function sendRequest(id){
   // URL を設定
-  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+y+'.json';
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+id+'.json';
 
   // 通信開始
   axios.get(url)
@@ -31,26 +37,18 @@ function sendRequest(y){
       .catch(showError)   // 通信失敗
       .then(finish);      // 通信の最後の処理
 }
-
-// 通信が成功した時の処理
 function showResult(resp) {
   // サーバから送られてきたデータを出力
   let data = resp.data;
-
-  // data が文字列型なら，オブジェクトに変換する
   if (typeof data === 'string') {
       data = JSON.parse(data);
   }
-  let f=document.querySelector('p#ansewer');
-  f.textContent=data.name+'の最高気温です'+data.main.temp_max+'です。最低気温は'+data.main.temp_min+'です。'
+  let f=document.querySelector('div#ansewer');
+  f.textContent=data.name+'の最高気温は'+data.main.temp_max+'です。最低気温は'+data.main.temp_min+'です。';
 }
-// 通信エラーが発生した時の処理
 function showError(err) {
   console.log(err);
-  let f=document.querySelector('p#ansewer');
-  f.taxtContent='そんなIDありません'
 }
-// 通信の最後にいつも実行する処理
 function finish() {
   console.log('Ajax 通信が終わりました');
 }
