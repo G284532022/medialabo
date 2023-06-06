@@ -43,8 +43,24 @@ function showResult(resp) {
   if (typeof data === 'string') {
       data = JSON.parse(data);
   }
-  let f=document.querySelector('div#ansewer');
-  f.textContent=data.name+'の最高気温は'+data.main.temp_max+'です。最低気温は'+data.main.temp_min+'です。';
+  let f1=document.querySelector('div#ansewer1');
+  f1.textContent='都市名:'+data.name;
+  let f2=document.querySelector('div#ansewer2');
+  f2.textContent='最高気温は'+data.main.temp_max+'です。';
+  let f3=document.querySelector('div#ansewer3');
+  f3.textContent='最低気温は'+data.main.temp_min+'です。';
+  let f4=document.querySelector('div#ansewer4');
+  f4.textContent='天気は'+data.weather[0].description+'です。';
+  let f5=document.querySelector('div#ansewer5');
+  f5.textContent='緯度'+data.coord.lon+'です。';
+  let f6=document.querySelector('div#ansewer6');
+  f6.textContent='経度'+data.coord.lat+'です。';
+  let f7=document.querySelector('div#ansewer7');
+  f7.textContent='風速'+data.wind.speed+'です。';
+  let f8=document.querySelector('div#ansewer8');
+  f8.textContent='風向'+data.wind.deg+'です。';
+  let f9=document.querySelector('div#ansewer9');
+  f9.textContent='湿度'+data.main.humidity+'です。';
 }
 function showError(err) {
   console.log(err);
