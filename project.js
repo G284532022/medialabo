@@ -1,6 +1,9 @@
 ////////// 課題3-2 ここからプログラムを書こう
-let b = document.querySelector('#sendRequest');
-b.addEventListener('click', sendRequset);
+let dd = [{tosi:"カイロ", id:"360630"},{tosi:"モスクワ", id:"360630"},{tosi:"", id:""},{tosi:"", id:""}
+,{tosi:"モスクワ", id:"360630"},{tosi:"モスクワ", id:"360630"},{tosi:"モスクワ", id:""},{tosi:"モスクワ", id:""}
+,{tosi:"モスクワ", id:"360630"},{tosi:"モスクワ", id:"360630"},{tosi:"モスクワ", id:""}],
+let b = document.querySelector('#print');
+b.addEventListener('click', sendRequest);
 function sendRequest() {
   // URL を設定
   let d =document.querySelector('input[name="toshi"]');
@@ -23,8 +26,8 @@ function showResult(resp) {
   if (typeof data === 'string') {
       data = JSON.parse(data);
   }
-  let f=documen.querySelector('p#ansewer');
-  f.textContent=date.name+'の最高気温です'+data.main.temp_max+'です。最低気温は'+data.main.temp_min+'です。'
+  let f=document.querySelector('p#ansewer');
+  f.textContent=data.name+'の最高気温です'+data.main.temp_max+'です。最低気温は'+data.main.temp_min+'です。'
 
   // data をコンソールに出力
   console.log(data);
@@ -36,7 +39,7 @@ function showResult(resp) {
 // 通信エラーが発生した時の処理
 function showError(err) {
   console.log(err);
-  let f=document.querySelector('p#answer');
+  let f=document.querySelector('p#ansewer');
   f.taxtContent='そんなIDありません'
 }
 

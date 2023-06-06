@@ -1,4 +1,29 @@
-h1 {
-	color: rgb(86, 175, 213);
+p{
+    color:black;
 }
+#ansewer{
+ color: rgb(16, 176, 190);
+}
+h1{
+    color:green;
+}
+.hyou {
+ width: 100%;
+ text-align: center;
+ border-collapse: collapse;
+ border-spacing: 0;
+   }
+   .hyou th {
+ padding: 10px;
+ background: #778ca3;
+ border: solid 1px #666666;
+ color: #ffffff;
+   }
+   .hyou td {
+ padding: 10px;
+ border: solid 1px #666666;
+   }
+   .hyou td:first-child {
+ background: #e9faf9;
+   }
 
